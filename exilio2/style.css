@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: aliceblue;
+
+}
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0); /* Cor preta com 50% de opacidade */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.nav img {
+    width: 150px; /* Tamanho inicial do logo */
+    height: auto;
+}
+.navlinks {
+    display: flex;
+    list-style: none;
+    margin-right: 5rem; /*posicionamento da nav*/
+}
+.navlinks li {
+    margin-left: 2rem;
+}
+.navlinks a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.intro {
+   /* position: relative;
+    display: inline-block; */
+    display: flex;
+   
+}
+.intro img {
+
+    width: 1170px;  /* Define uma largura fixa */
+    height: 700px; /* Define uma altura fixa */
+}
+.textintro {
+    background-color: blue;
+    border-left: solid;
+    color: rgb(131, 2, 92);
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    width: 900px;
+    height: 700px;
+    
+}
+
+h1 {
+    color: yellow;
+}
+.estatisticas {
+    display: flex; 
+    justify-content: center; 
+    gap: 60px; /* Espaço entre as divs */
+    /* IMPORTANTE!!! reduzir o tamanho dos criculos ao reduzir a tela */
+    
+}
+
+
+.circle {
+    width: 150px; 
+    height: 150px; 
+    border: 6px solid black; 
+    border-radius: 50%; 
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaço interno */
+}
+    
+.circle h3 {
+        margin: 30, 15px;
+        font-size: 1.5em;
+    }
+    
+.circle p {
+        margin: 15, 30px;
+        font-size: 1em;
+}
+
+/*imagem sobreposta sobre o texto*/
+.texto {
+    font-size: 3rem;
+    padding: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    display: inline-block; 
+    justify-content: center;
+    text-align: center;
+    color: rgb(247, 231, 231);
+   
+    position: relative;
+    z-index: 2; 
+}
+.page {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-image: url('./img/pexels-nadin-sh-78971847-18743143.jpg'); 
+    background-position: center;
+    opacity: 0.5; /* Define a opacidade da imagem */
+    z-index: 1; /* Coloca a imagem atrás do conteúdo */
+}
+.subscribe {
+    color: rgb(0, 0, 0);
+}

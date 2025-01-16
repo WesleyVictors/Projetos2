@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Produtos</title>
+    <link rel="stylesheet" href="padrao.css">
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .product-card {
+            width: 300px;
+            height: 450px;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .product-card h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            flex-shrink: 0;
+        }
+        .product-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .product-card a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .product-card a:hover {
+            background-color: #ffd633;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        footer h5 {
+            font-size: 1rem;
+            margin: 0.2rem 0;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 0.3rem 0.7rem;
+            font-size: 0.9rem;
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .back-btn:hover {
+            background-color: #ffd633;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav">
+            <img src="./img/Logo Magnifico.png" alt="Logo do site">
+            <nav class="navbar" id="menu">
+                <ul class="navlinks">
+                    <li><a href="#queijos">Queijos</a></li>
+                    <li><a href="#doces">Doces</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#charcutaria">Charcutaria</a></li>
+                    <li><a href="#paes">Pães</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Botão Voltar -->
+    <a href="#" onclick="history.back();" class="back-btn">Voltar</a>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <h2 style="text-align: center; margin-top: 100px;">Nossos Produtos</h2>
+
+        <!-- Seção Queijos -->
+        <h3 id="queijos" style="text-align: center; margin-top: 50px;">Queijos</h3>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="./img/qjo-mandala.webp" alt="Produto 1">
+                <h3>Queijo Mandala – Pardinho Artesanal</h3>
+                <p>O Queijo Mandala Pardinho Artesanal é um queijo de sabor delicado e textura cremosa, produzido de forma tradicional e artesanal.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/queijo-mogiana.webp" alt="Produto 5">
+                <h3>Queijo Mogiana – Fazenda Atalaia</h3>
+                <p>O Queijo Mogiana da Fazenda Atalaia é um queijo artesanal de sabor marcante, cremoso e produzido com leite fresco.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/qjo-grana.webp" alt="Produto 5">
+                <h3>Queijo Grana dos Laura – Queijaria Santo Antônio – 200g</h3>
+                <p>O Queijo Grana dos Laura da Queijaria Santo Antônio é um queijo curado de textura firme e sabor intenso, perfeito para ralar ou degustar.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/qjo-da-canastra-trad.webp" alt="Produto 5">
+                <h3>Queijo Da Canastra Tradicional – Fazenda Jacob</h3>
+                <p>O Queijo da Canastra Tradicional da Fazenda Jacob é um queijo artesanal de sabor rico e autêntico, maturado com excelência na Serra da Canastra.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/qjo-lua-cheia.webp" alt="Produto 5">
+                <h3>Queijo Lua Cheia – Serra das Antas – 300g (aprox.)</h3>
+                <p>O Queijo Lua Cheia da Serra das Antas é um queijo artesanal de casca florida, com textura macia e sabor suave e equilibrado.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/qjo-figueira.png" alt="Produto 5">
+                <h3>Queijo Figueira – Atalaia</h3>
+                <p>O Queijo Figueira da Atalaia é um queijo artesanal de textura cremosa e sabor marcante, inspirado em técnicas tradicionais.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Seção Doces -->
+        <h3 id="doces" style="text-align: center; margin-top: 50px;">Doces</h3>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="./img/doce-de-leite-cremoso.webp" alt="Produto 4">
+                <h3>Doce de Leite Cremoso – Queijaria Santo Antônio – 260g</h3>
+                <p>O Doce de Leite Cremoso da Queijaria Santo Antônio é uma delícia suave e aveludada, feita com leite de alta qualidade para um sabor irresistível.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/goiaba-cascão.webp" alt="Produto 4">
+                <h3>Goiabada Cascão – Fazenda Atalaia – 300g</h3>
+                <p>A Goiabada Cascão da Fazenda Atalaia é uma delícia artesanal, feita com goiabas selecionadas e textura rústica que encanta pelo sabor autêntico.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/bsc-amanteigado-trad.webp" alt="Produto 4">
+                <h3>Biscoito Amanteigado Tradicional – 100g</h3>
+                <p>O Biscoito Amanteigado Tradicional é uma delícia leve e crocante, com o toque suave da manteiga que derrete na boca.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/nibs-de-cacau-mestiço.webp" alt="Produto 4">
+                <h3>Nibs de Cacau Mestiço (100g)</h3>
+                <p>Os Nibs de Cacau Mestiço são pedaços crocantes de cacau puro, com sabor intenso e propriedades naturais, perfeitos para lanches ou receitas.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/dc-de-leite-barra.webp" alt="Produto 4">
+                <h3>Doce de Leite em Barra – Atalaia – 220g</h3>
+                <p>O Doce de Leite em Barra da Atalaia é uma iguaria artesanal, de textura firme e sabor suave que remete às tradições caseiras.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/geleia-de-alho-negro.webp" alt="Produto 4">
+                <h3>Geleia de Alho Negro – Zappa Geleias – 160g</h3>
+                <p>A Geleia de Alho Negro da Zappa Geleias combina o sabor adocicado e complexo do alho negro com um toque artesanal único.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Seção Bebidas -->
+        <h3 id="bebidas" style="text-align: center; margin-top: 50px;">Bebidas</h3>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="./img/cerveja-german-pils.webp" alt="Produto 6">
+                <h3>Cerveja German Pils – Tarantino – 473ml</h3>
+                <p>A Cerveja German Pils da Tarantino é uma lager refrescante, com amargor equilibrado e notas florais, perfeita para qualquer ocasião.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/vinho-laranja-sauvignon-blanc.jpg" alt="Produto 6">
+                <h3>Vinho Laranja Vivente Sauvignon Blanc – 750ml</h3>
+                <p>O Vinho Laranja Vivente Sauvignon Blanc é uma bebida única, com notas cítricas e florais, equilibrando frescor e complexidade, ideal para momentos especiais.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/cachaça-5anos.webp" alt="Produto 6">
+                <h3>Cachaça Weber Haus Extra Premium 5 Anos Reserva Solera – 750ml</h3>
+                <p>A Cachaça Weber Haus Extra Premium 5 Anos Reserva Solera é uma bebida nobre, envelhecida em barris especiais, com sabor complexo e aroma refinado.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/cachaça-6anos.webp" alt="Produto 6">
+                <h3>Cachaça Weber Haus Extra Premium 6 Anos – 750ml</h3>
+                <p>A Cachaça Weber Haus Extra Premium 6 Anos é uma cachaça artesanal, envelhecida em carvalho, com sabor sofisticado e aroma marcante.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/switchel-kiro.webp" alt="Produto 6">
+                <h3>Switchel Kiro Maracujá e Cúrcuma – Kiro – 310ml</h3>
+                <p>O Switchel Kiro Maracujá e Cúrcuma é uma bebida natural e refrescante, com equilíbrio perfeito entre o azedinho do maracujá e o toque exótico da cúrcuma.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/vinho-larentis-viognier.webp" alt="Produto 6">
+                <h3>Vinho Larentis Viognier – 750ml</h3>
+                <p>O Vinho Larentis Viognier é um branco elegante, com notas florais e frutadas, que oferece frescor e suavidade em cada gole.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Seção Charcutaria -->
+        <h3 id="charcutaria" style="text-align: center; margin-top: 50px;">Charcutaria</h3>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="./img/panceta-masturada.webp" alt="Produto 2">
+                <h3>Panceta Maturada – Sagrada Família – 100g (fatiada)</h3>
+                <p>A Panceta Maturada Sagrada Família é fatiada artesanalmente, com sabor intenso e textura macia, ideal para realçar qualquer prato.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/bacon-defumado.webp" alt="Produto 7">
+                <h3>Bacon Defumado Jais Handmade</h3>
+                <p>O Bacon Defumado Jais Handmade é artesanal, com sabor robusto e defumação perfeita, ideal para pratos saborosos.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/salame-salumeria.png" alt="Produto 7">
+                <h3>Salame da Casa – Salumeria Mayer – 250g</h3>
+                <p>O Salame da Casa da Salumeria Mayer é um embutido artesanal de cordeiro, com temperos exclusivos e sabor sofisticado.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/fiocco-de-culatello.webp" alt="Produto 7">
+                <h3>Fiocco de Culatello – Jais Handmade – 100g</h3>
+                <p>O Fiocco de Culatello da Jais Handmade é um corte artesanal refinado, curado e de sabor delicadamente intenso, perfeito para paladares exigentes.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/lonza-duroc.webp" alt="Produto 7">
+                <h3>Lonza Duroc (fatiada) – Salumeria Mayer – 100g</h3>
+                <p>A Lonza Duroc fatiada da Salumeria Mayer é um embutido artesanal de carne suína nobre, com textura macia e sabor equilibrado.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/presunto-cru.webp" alt="Produto 7">
+                <h3>Presunto cru tipo Speck Duroc (fatiada) – Salumeria Mayer – 100g</h3>
+                <p>O Presunto Cru tipo Speck Duroc da Salumeria Mayer é um embutido artesanal defumado, de sabor intenso e textura delicada.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Seção Pães -->
+        <h3 id="paes" style="text-align: center; margin-top: 50px;">Pães</h3>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="./img/baguette-de-grãos.webp" alt="Produto 8">
+                <h3>Baguette de Grãos – Vestra Panem – 250g</h3>
+                <p>A Baguette de Grãos da Vestra Panem é uma iguaria crocante, feita com uma mistura de grãos selecionados, oferecendo sabor e textura únicos.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/pão-italiano.webp" alt="Produto 8">
+                <h3>Pão Italiano – Vestra Panem – 500g</h3>
+                <p>O Pão Italiano da Vestra Panem é uma massa artesanal com crosta dourada e sabor levemente fermentado, ideal para acompanhar qualquer refeição.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/croissant-vestra-panem.webp" alt="Produto 8">
+                <h3>Croissant – Vestra Panem – 200g</h3>
+                <p>O Croissant da Vestra Panem é leve e amanteigado, com camadas delicadas que derretem na boca e um sabor irresistível.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/baguette-artesanal.webp" alt="Produto 8">
+                <h3>Baguette Artesanal – Vestra Panem – 250g</h3>
+                <p>A Baguette Artesanal da Vestra Panem é feita com ingredientes selecionados, resultando em uma crocância perfeita e sabor delicado.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/grissinis-de-gergelim.webp" alt="Produto 8">
+                <h3>Grissinis Sabor Gergelim – Estilo Caseiro – 100g</h3>
+                <p>Os Grissinis Sabor Gergelim Estilo Caseiro são crocantes e aromáticos, com um toque de gergelim que adiciona sabor e textura únicos.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="./img/panetone-org-nat.webp" alt="Produto 8">
+                <h3>Panetone Orgânico de Fermentação Natural com Goiabada Cascão Cremosa e Chocolate Branco – Yandê</h3>
+                <p>O Panetone Orgânico Yandê tem goiabada cremosa e chocolate branco, com sabor único e delicado.</p>
+                <a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">Comprar no WhatsApp</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div>
+            <h4>Contato</h4>
+            <h5><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></h5>
+            <h5><a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">(00) 00000-0000</a></h5>
+        </div>
+    </footer>
+</body>
+</html>

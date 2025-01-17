@@ -10,27 +10,26 @@
 
 <body>
 
-    <head>
+    <header>
         <div class="nav">
-           
             <img src="./img/Logo Magnifico.png">
             <nav class="navbar" id="menu">
                 <ul class="navlinks">
                     <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="serviços">Serviços</a></li>
-                    <li><a href="sobre">Sobre nós</a></li>
-                    <li><a href="contato">Contato</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
+                    <li><a href="#contato">Contato</a></li>                    
                 </ul>
             </nav>
         </div>
-    </head>
+    </header>
+
     <main>
         <article class="intro">
-            <img src="./img/Quadro 1.jpg"class=quadro1>
+            <img src="./img/Quadro 1.jpg" class="quadro1">
             <img src="./img/Shapes 0.png" class="shape1">
-          
             <div class="textintro">
-                <h1>Sobre nós</h1>
+                <h1 id="sobre-nos">Sobre nós</h1>
                 <p>
                     A Exílio nasceu em 2022 com a paixão e o compromisso de proporcionar experiências gastronômicas
                     únicas. Especializada em defumados e churrasco de chão, a Exílio traz o autêntico sabor do churrasco
@@ -41,38 +40,34 @@
                     Seja para celebrações familiares, eventos corporativos ou grandes festivais, a Exílio é sinônimo de
                     sabor e qualidade. Venha descobrir o verdadeiro prazer do churrasco com a gente!
                 </p>
-                <a>Faça seu orçamento</a>
+                <a href="#subscribe">Faça seu orçamento</a>
             </div>
         </article>
-        
-                <section class="BestProducts">
-                    <h2>Mais Vendidos</h2>
-                    <p> A Exílio é sinônimo de qualidade e sabores que transportam os sentidos para uma verdadeira
-                        viagem gastronômica. Cada produto é uma verdadeira obra-prima, preparada com dedicação e respeito à
-                        tradição da charcutaria artesanal. </p>
-                    <div class="product-container">
-                        <div class="product-card">
-                            <img src="./img/porco.jpg" alt="Suínos Defumados">
-                            <h3>Suínos Defumados</h3>
-                            <p>Nossos defumados são verdadeiras obras-primas, preparados com carnes selecionadas e temperos
-                                exclusivos.</p>
-                        </div>
-                        <div class="product-card">
-                            <img src="./img/qjo-martina-caminho-do-queijo-paulista.jpg" alt="Queijos e Especiarias">
-                            <h3>Queijos e Especiarias</h3>
-                            <p>Seleção exclusiva de queijos e especiarias para acompanhar nossos defumados.</p>
-                        </div>
-                        <div class="product-card">
-                            <img src="./img/Curso-Fabricacao-De-Salames-Charcutaria-Artesanal-O-que-E.jpg" alt="Salames Defumados">
-                            <h3>Salames Defumados</h3>
-                            <p>Os salames artesanais oferecem uma combinação perfeita de especiarias e defumação.</p>
-                        </div>
-                    </div>
-                </section>
 
+        <section id="BestProducts" class="BestProducts">
+            <h2>Mais Vendidos</h2>
+            <p> A Exílio é sinônimo de qualidade e sabores que transportam os sentidos para uma verdadeira
+                viagem gastronômica. Cada produto é uma verdadeira obra-prima, preparada com dedicação e respeito à
+                tradição da charcutaria artesanal. </p>
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="./img/porco.jpg" alt="Suínos Defumados">
+                    <h3>Suínos Defumados</h3>
+                    <p>Nossos defumados são verdadeiras obras-primas, preparados com carnes selecionadas e temperos
+                        exclusivos.</p>
+                </div>
+                <div class="product-card">
+                    <img src="./img/qjo-martina-caminho-do-queijo-paulista.jpg" alt="Queijos e Especiarias">
+                    <h3>Queijos e Especiarias</h3>
+                    <p>Seleção exclusiva de queijos e especiarias para acompanhar nossos defumados.</p>
+                </div>
+                <div class="product-card">
+                    <img src="./img/Curso-Fabricacao-De-Salames-Charcutaria-Artesanal-O-que-E.jpg" alt="Salames Defumados">
+                    <h3>Salames Defumados</h3>
+                    <p>Os salames artesanais oferecem uma combinação perfeita de especiarias e defumação.</p>
+                </div>
             </div>
-
-
+        </section>
 
         <section class="meio">
             <img src="./img/Quadro 2.png" class="quadro2">
@@ -82,56 +77,44 @@
                 <p>
                     Churrasco de Fogo de Chão:
                     O churrasco de fogo de chão é uma técnica tradicional de assar carne, especialmente popular no sul
-                    do
-                    Brasil, particularmente no Rio Grande do Sul. Esse método tem suas raízes nas práticas dos gaúchos,
-                    os
-                    cowboys da região, que desenvolviam a técnica enquanto trabalhavam nas planícies do Pampa.
+                    do Brasil, particularmente no Rio Grande do Sul. Esse método tem suas raízes nas práticas dos gaúchos,
+                    os cowboys da região, que desenvolviam a técnica enquanto trabalhavam nas planícies do Pampa.
                 </p>
-                <a>Entre em contato</a>
+                <a href="#contato">Entre em contato</a>
             </div>
-            <div class="dados">
-                <h2>Estatisticas</h2>
+            <div class="dados" id="estatisticas">
+                <h2>Estatísticas</h2>
                 <div class="estatisticas">
-                <div class="circle">
-                <h3>123</h3>
-                <p>eventos</p>
-                </div>
-                <div class="circle">
-                <h3>10</h3>
-                <p>chefs</p>
-                </div>
-                <div class="circle">
-                <h3>300</h3>
-                <p>produtos</p>
-                </div>
-                <div class="circle">
-                <h3>5</h3>
-                <p>cidades</p>
-                </div>
+                    <div class="circle">
+                        <h3>123</h3>
+                        <p>eventos</p>
+                    </div>
+                    <div class="circle">
+                        <h3>10</h3>
+                        <p>chefs</p>
+                    </div>
+                    <div class="circle">
+                        <h3>300</h3>
+                        <p>produtos</p>
+                    </div>
+                    <div class="circle">
+                        <h3>5</h3>
+                        <p>cidades</p>
+                    </div>
                 </div>
             </div>
             <div class="MelhorProduto2">
-
                 <p>
-                Churrasco de Fogo de Chão:
-                O churrasco de fogo de chão é uma técnica tradicional de assar carne, especialmente popular no sul
-                do
-                Brasil, particularmente no Rio Grande do Sul. Esse método tem suas raízes nas práticas dos gaúchos,
-                os
-                cowboys da região, que desenvolviam a técnica enquanto trabalhavam nas planícies do Pampa.
+                    Churrasco de Fogo de Chão:
+                    O churrasco de fogo de chão é uma técnica tradicional de assar carne, especialmente popular no sul
+                    do Brasil, particularmente no Rio Grande do Sul. Esse método tem suas raízes nas práticas dos gaúchos,
+                    os cowboys da região, que desenvolviam a técnica enquanto trabalhavam nas planícies do Pampa.
                 </p>
-                <a>Entre em contato</a>
+                <a href="#contato">Entre em contato</a>
                 <img src="./img/pexels-jibarofoto-1857730.jpg">
             </div>
-            
+
         </section>
-
-
-
-
-
-
-
 
         <article class="page">
             <p class="texto">Cada item da Exílio é feito com paixão e respeito pela arte da charcutaria, e é isso que torna sua
@@ -139,39 +122,41 @@
                 eles agregam um sabor sofisticado e autêntico, elevando qualquer prato a uma experiência inesquecível."
             </p>
         </article>
-        <article class="subscribe">
+        <article id="subscribe" class="subscribe">
             <h2>INSCREVA-SE</h2>
             <p>Inscreva-se em nosso canal de atendimento e receba as principais notícias dos eventos que irão acontecer
                 e ganhe cupons de descontos em produtos do site!</p>
         </article>
     </main>
+
     <footer>
-        <div>
-            <h4>Contate-nos</h4>
-            <p>31 123456789</p>
-        </div>
-        <div>
-            <h4>Sobre nós</h4>
-            <h5>História</h5>
-            <h5>Como surgiu</h5>
-            <h5>Termos e condições</h5>
-            <h5>Política de privacidade</h5>
-        </div>
-        <div>
-            <h4>Serviços</h4>
-            <h5>Produtos</h5>
-            <h5>Receitas</h5>
-            <h5>Sugestões</h5>
-        </div>
-        <div>
-            <h4>Outros</h4>
-            <h5>Contato</h5>
-            <h5>Ajuda</h5>
-            <h5>Sugestões</h5>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p id="contato"><a href="https://wa.me/5531123456789" target="_blank">31 123456789 (WhatsApp)</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Sobre nós</h4>
+                <p><a href="#sobre-nos">Clique aqui para saber mais</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Mais Vendidos</h4>
+                <p><a href="#BestProducts">Veja nossos produtos mais vendidos</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Estatísticas</h4>
+                <p><a href="#estatisticas">Confira nossas estatísticas</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Serviços</h4>
+                <p><a href="produtos.html">Veja nossos produtos</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Inscreva-se</h4>
+                <p><a href="#subscribe">Inscreva-se e receba novidades</a></p>
+            </div>
         </div>
     </footer>
-
-
 
 </body>
 

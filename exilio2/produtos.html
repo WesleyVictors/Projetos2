@@ -95,7 +95,7 @@
         footer a:hover {
             text-decoration: underline;
         }
-        .back-btn {
+        .btn-voltar {
             display: inline-block;
             padding: 0.3rem 0.7rem;
             font-size: 0.9rem;
@@ -104,15 +104,18 @@
             font-weight: bold;
             text-decoration: none;
             border-radius: 4px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            position: fixed; /* Fixa o botão na tela */
+            top: 10px; /* Distância do topo */
+            left: 10px; /* Distância da lateral esquerda */
+            z-index: 1000; /* Garante que o botão fique acima de outros elementos */
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        .back-btn:hover {
+
+       .btn-voltar:hover {
             background-color: #ffd633;
             transform: scale(1.05);
         }
+
     </style>
 </head>
 <body>
@@ -133,7 +136,7 @@
     </header>
 
     <!-- Botão Voltar -->
-    <a href="#" onclick="history.back();" class="back-btn">Voltar</a>
+    <a href="index.html" class="btn-voltar">Voltar</a>
 
     <!-- Conteúdo principal -->
     <div class="content">

@@ -5,118 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Produtos</title>
     <link rel="stylesheet" href="padrao.css">
-    <style>
-        body {
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .content {
-            flex: 1;
-        }
-        .product-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .product-card {
-            width: 300px;
-            height: 450px;
-            padding: 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .product-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-        .product-card h3 {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 0.5rem;
-            flex-shrink: 0;
-        }
-        .product-card p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 1rem;
-            flex-grow: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .product-card a {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #ffcc00;
-            color: #000;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .product-card a:hover {
-            background-color: #ffd633;
-            transform: scale(1.05);
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        footer h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        footer h5 {
-            font-size: 1rem;
-            margin: 0.2rem 0;
-        }
-        footer a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .btn-voltar {
-            display: inline-block;
-            padding: 0.3rem 0.7rem;
-            font-size: 0.9rem;
-            background-color: #ffcc00;
-            color: #000;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 4px;
-            position: fixed; /* Fixa o botão na tela */
-            top: 10px; /* Distância do topo */
-            left: 10px; /* Distância da lateral esquerda */
-            z-index: 1000; /* Garante que o botão fique acima de outros elementos */
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-       .btn-voltar:hover {
-            background-color: #ffd633;
-            transform: scale(1.05);
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 </head>
 <body>
     <!-- Header -->
@@ -130,18 +20,20 @@
                     <li><a href="#bebidas">Bebidas</a></li>
                     <li><a href="#charcutaria">Charcutaria</a></li>
                     <li><a href="#paes">Pães</a></li>
+                    <li><a href="blog.html">Sobre nós</a></li>
+                    <li><a href="index.html">Voltar</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Botão Voltar -->
-    <a href="index.html" class="btn-voltar">Voltar</a>
+    
 
     <!-- Conteúdo principal -->
     <div class="content">
         <h2 style="text-align: center; margin-top: 100px;">Nossos Produtos</h2>
-
+      
         <!-- Seção Queijos -->
         <h3 id="queijos" style="text-align: center; margin-top: 50px;">Queijos</h3>
         <div class="product-container">
@@ -351,10 +243,17 @@
 
     <!-- Rodapé -->
     <footer>
-        <div>
-            <h4>Contato</h4>
-            <h5><a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></h5>
-            <h5><a href="https://wa.me/SEU_NUMERO_DE_WHATSAPP" target="_blank">(00) 00000-0000</a></h5>
+        <div class="footer-content">
+            <p>&copy; 2025 Exílio. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://wa.me/5591999999999" target="_blank" class="social-icon">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/exilio" target="_blank" class="social-icon">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+             
         </div>
     </footer>
 </body>

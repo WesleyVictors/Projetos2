@@ -16,7 +16,7 @@ body {
     top: 20px;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.0); /* Cor preta com 0% de opacidade */
+    background-color: rgba(0, 0, 0, 0.0);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -329,64 +329,79 @@ h2 {
     color: #34495e;
 }
 
-/* Footer */
-footer {
-    background-color: #2c3e50; /* Cor de fundo ajustada para o tom original */
-    color: white;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-align: center;
-}
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 20px;
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
     width: 100%;
+    max-width: 400px;
 }
 
-.footer-section {
-    flex: 1;
-    margin: 1rem 0;
+
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
 }
 
-.footer-section h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #f8f9fa;
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
 }
 
-.footer-section p {
-    font-size: 1rem;
-    margin: 0.3rem 0;
-    color: #ddd;
-}
-
-footer a {
-    color: #f2a900;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-footer h5 {
-    font-size: 1rem;
-    margin: 0.3rem 0;
-    color: #ddd;
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-footer h5:hover {
-    color: #fff;
-    text-decoration: underline;
+button:hover {
+    background-color: #45a049;
 }
+
+/* Estilos da mensagem de confirmação */
+.mensagem {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+.mensagem.sucesso {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.mensagem.erro {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -429,4 +444,38 @@ footer h5:hover {
     margin: 0 auto;
     z-index: 1;
     line-height: 1.4;
+}
+
+
+
+
+footer {
+    background-color: #2c3e50;
+    color: white; /* Cor do texto */
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+.social-links {
+    margin-top: 15px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon i {
+    width: 30px; /* Tamanho dos ícones */
+    height: 30px;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.social-icon i:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }

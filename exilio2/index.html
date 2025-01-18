@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exilio</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -16,9 +17,8 @@
             <nav class="navbar" id="menu">
                 <ul class="navlinks">
                     <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="serviços">Serviços</a></li>
-                    <li><a href="#sobre-nos">Sobre nós</a></li>
-                    <li><a href="#contato">Contato</a></li>                    
+                    <li><a href="blog.html">Sobre nós</a></li>
+                    <li><a href="https://wa.me/5591999999999" target="_blank">Contato</a></li>                  
                 </ul>
             </nav>
         </div>
@@ -126,35 +126,38 @@
             <h2>INSCREVA-SE</h2>
             <p>Inscreva-se em nosso canal de atendimento e receba as principais notícias dos eventos que irão acontecer
                 e ganhe cupons de descontos em produtos do site!</p>
+            
+
+            <div class="form-container">
+                    <h2>Formulário de Cadastro</h2>
+                    <form id="form-cadastro" onsubmit="enviarFormulario(event)">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required><br>
+            
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required><br>
+            
+                        <button type="submit">Enviar</button>
+                    </form>
+            
+                    
+                    <div id="mensagem" class="mensagem"></div>
+            </div>
         </article>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Contato</h4>
-                <p id="contato"><a href="https://wa.me/5531123456789" target="_blank">31 123456789 (WhatsApp)</a></p>
+        <div class="footer-content">
+            <p>&copy; 2025 Exílio. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://wa.me/5591999999999" target="_blank" class="social-icon">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/exilio" target="_blank" class="social-icon">
+                    <i class="bi bi-instagram"></i>
+                </a>
             </div>
-            <div class="footer-section">
-                <h4>Sobre nós</h4>
-                <p><a href="#sobre-nos">Clique aqui para saber mais</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Mais Vendidos</h4>
-                <p><a href="#BestProducts">Veja nossos produtos mais vendidos</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Estatísticas</h4>
-                <p><a href="#estatisticas">Confira nossas estatísticas</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Serviços</h4>
-                <p><a href="produtos.html">Veja nossos produtos</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Inscreva-se</h4>
-                <p><a href="#subscribe">Inscreva-se e receba novidades</a></p>
-            </div>
+             
         </div>
     </footer>
 

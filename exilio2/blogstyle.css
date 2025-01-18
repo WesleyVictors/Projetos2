@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&display=swap');
+
+/* CSS criado para padronizar as outras paginas que serão adicionadas
+ site para tiramos ideias https://acasadoprodutor.com.br
+
+ cor padrao #0A2126
+ */
+    
+
+main {
+    margin-top: 400px;
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin:  auto; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    
+}
+body {
+    color: aliceblue;
+    background-image: url("./img/Quadro\ 2.png");
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    background-size: contain;
+}
+
+.inicio {
+    text-align: center;
+}
+h1 {
+    font-family: 'Playwrite VN', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+}
+h2 {
+    font-family: 'Playwrite VN', sans-serif;
+    font-size: 3rem;
+}
+h3 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de transparência */    
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.nav img {
+    width: 150px; /* Tamanho inicial do logo */
+    height: auto;
+}
+.navlinks {
+    display: flex;
+    list-style: none;
+    margin-right: 5rem; /* Posicionamento da nav */
+}
+.navlinks li {
+    margin-left: 2rem;
+}
+.navlinks a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s; 
+}
+.navlinks a:hover {
+    opacity: 0.7; 
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+
+
+
+main div {
+    color: #0A2126;
+    background-color: white; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno, para que o conteúdo não toque as bordas */
+    margin-bottom: 40px; /* Margens externas para separar o container de outros elementos */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8); /* Sombra nas margens */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
+  
+}
+.topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.topo img {
+    width: 1100px;
+    height: auto;
+    margin: 20px;
+}
+
+
+
+.inscrever-se {
+    background-image: url("./img/Quadro\ 3.png");
+    margin: 40px;
+    text-align: center;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+  }
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #2c3e50;
+    color: white; /* Cor do texto */
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+.social-links {
+    margin-top: 15px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon i {
+    width: 30px; /* Tamanho dos ícones */
+    height: 30px;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.social-icon i:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+

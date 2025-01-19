@@ -13,32 +13,29 @@ body {
 
 .nav {
     position: fixed;
-    top: 20px;
+    top: 0px;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de transparência */    
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
 }
-
 .nav img {
     width: 150px; /* Tamanho inicial do logo */
     height: auto;
 }
-
 .navlinks {
     display: flex;
     list-style: none;
     margin-right: 5rem; /* Posicionamento da nav */
 }
-
 .navlinks li {
     margin-left: 2rem;
 }
-
 .navlinks a {
     color: rgb(255, 255, 255); 
     text-decoration: none;
@@ -46,13 +43,11 @@ body {
     font-size: 1.5rem;
     transition: color 0.3s, transform 0.3s; 
 }
-
 .navlinks a:hover {
     opacity: 0.7; 
     transform: scale(1.1); 
     cursor: pointer;
 }
-
 .intro {
     
     position: relative;
@@ -80,7 +75,7 @@ body {
     position: absolute;
     height: 400px;
     width: 600px;  /*alinhamento texto inicial*/
-    top: 80px;
+    top: 100px;
     right: 180px;   
 }
 .textintro a {
@@ -151,7 +146,7 @@ h2 {
     font-size: 1.5rem;
     color: #34495e;
     margin-bottom: 2rem;
-    text-align: justify;
+    text-align: left;
     margin-left: 0px;
     width: 100%;
     
@@ -189,9 +184,9 @@ h2 {
     color: rgb(255, 255, 255);
     position: absolute;
     height: 400px;
-    width: 600px;  /*alinhamento texto inicial*/
+    width: 600px;  
     top: 80px;
-    right: 180px;   
+    right: 100px;   
 }
 .MelhorProduto p {
     margin-top: 100px;
@@ -464,6 +459,9 @@ footer {
 .social-links {
     margin-top: 15px;
 }
+.social-links a {
+    text-decoration: none;
+}
 
 .social-icon {
     margin: 0 10px;
@@ -474,6 +472,7 @@ footer {
     height: 30px;
     transition: transform 0.3s;
     color: white;
+    
 }
 
 .social-icon i:hover {

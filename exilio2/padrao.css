@@ -21,10 +21,11 @@ h2 {
 }
 .nav {
     position: fixed;
-    top: 20px;
+    top: 0px;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de transparência */    
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -45,8 +46,6 @@ h2 {
 }
 .navlinks a {
     color: rgb(255, 255, 255); 
-    text-shadow: 
-    2px 2px 5px black,    /* Realce preto ao redor do texto */;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
@@ -57,7 +56,6 @@ h2 {
     transform: scale(1.1); 
     cursor: pointer;
 }
-
 .content {
     flex: 1;
 }
@@ -118,6 +116,7 @@ h2 {
     background-color: #ffd633;
     transform: scale(1.05);
 }
+
 
 footer {
     background-color: #2c3e50;

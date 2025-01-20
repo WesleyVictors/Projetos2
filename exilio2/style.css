@@ -4,7 +4,7 @@
 /* !!!!referente a pagina INDEX.HTML*/
 body {
     background-color: aliceblue;
-    margin: 0px;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
 
@@ -74,7 +74,7 @@ body {
     position: absolute;
     height: 400px;
     width: 600px;  
-    top: 100px;
+    top: 150px;
     right: 180px;   
 }
 .textintro a {

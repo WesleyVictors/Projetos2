@@ -1,24 +1,22 @@
+
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const path = require('path');
-
-// Criar uma instância do express
 const app = express();
 
-// Configurar o middleware para processar os dados do formulário
+// Configurar o middleware para processamento dos dados
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json()); // Para lidar com JSON
+app.use(bodyParser.json()); 
 
-// Configuração do banco de dados MySQL
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'USER',  // Seu usuário do MySQL
-  password: '86683684',  // Sua senha do MySQL
-  database: 'clientes' // Nome do banco de dados
+  user: 'USER',  
+  password: '86683684',  
+  database: 'clientes' 
 });
 
-// Conectar ao banco de dados
+// Conectando ao bd
 db.connect((err) => {
   if (err) {
     console.error('Erro ao conectar ao banco de dados: ' + err.stack);
@@ -27,16 +25,16 @@ db.connect((err) => {
   console.log('Conectado ao banco de dados');
 });
 
-// Rota para exibir o formulário HTML
+// Rota do html
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Rota para processar o formulário
+// Rota para processamento dos dados 
 app.post('/processar', (req, res) => {
   const { nome, email } = req.body;
 
-  // Prevenir injeção de SQL
+  // insere valores na tabela
   const query = 'INSERT INTO clientes (nome, email) VALUES (?, ?)';
   db.query(query, [nome, email], (err, result) => {
     if (err) {
@@ -48,7 +46,7 @@ app.post('/processar', (req, res) => {
 });
 
 // Iniciar o servidor
-const PORT = 3000;
+const PORT = 3306;
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
@@ -56,9 +54,9 @@ app.listen(PORT, () => {
 
 
 
-// Função para enviar o formulário via AJAX
+// enviar o formulário via AJAX
 function enviarFormulario(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault(); 
 
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
@@ -83,7 +81,7 @@ function enviarFormulario(event) {
     });
 }
 
-// Função para mostrar a mensagem de sucesso/erro
+//  mensagem de sucesso/erro
 function mostrarMensagem(mensagem, erro = false) {
     const mensagemDiv = document.getElementById('mensagem');
     mensagemDiv.textContent = mensagem;
@@ -91,8 +89,9 @@ function mostrarMensagem(mensagem, erro = false) {
     mensagemDiv.classList.add(erro ? 'erro' : 'sucesso');
     mensagemDiv.style.display = 'block';
 
-    // Depois de 5 segundos, a mensagem desaparece
+    // Define tempo da mensagem
     setTimeout(() => {
         mensagemDiv.style.display = 'none';
     }, 5000);
 }
+  

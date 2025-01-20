@@ -171,12 +171,15 @@ h2 {
     object-fit: cover;
 }
 .shape2 {
-    position: absolute; 
-    left: 1000px;
-    width: 70%; 
-    height: 650px; 
+    position: absolute;
+    
+    
+    width: auto;
+    object-fit: cover;
+   
     pointer-events: none; 
-    top: 1000px;
+    top: 320px;
+    left: 380px;
     transform: translate(-50%, -50%); 
 }
 
@@ -185,7 +188,7 @@ h2 {
     position: absolute;
     height: 400px;
     width: 600px;  
-    top: 80px;
+    top: 300px;
     right: 100px;   
 }
 .MelhorProduto p {
@@ -210,6 +213,7 @@ h2 {
 .MelhorProduto img {
     width: 600px;
     height: 600px;
+    object-fit: cover;
     border-radius: 50%;
     position: absolute;
     right: 900px;
@@ -218,7 +222,7 @@ h2 {
 .dados {
     text-align: center;
     position: absolute;
-    top: 700px;
+    top: 1200px;
     left: 50%;
     transform: translateX(-50%); /* Centraliza horizontalmente */
 }
@@ -246,14 +250,17 @@ h2 {
     border-radius: 50%; 
     text-align: center; /* Centraliza o texto */
     padding: 20px; /* Espaço interno */
-}
     
+   
+}
+
 .circle h3 {
         margin: 30, 15px;
         font-size: 1.5em;
         color: #ffcc00; 
         font-weight: 700;
     }
+
     
 .circle p {
         margin: 15, 30px;
@@ -265,10 +272,11 @@ h2 {
 .MelhorProduto2 {
     color: rgb(255, 255, 255);
     position: absolute;
-    height: 400px;
-    width: 600px;  /*alinhamento texto inicial*/
-    top: 2200px;
-    right: 1000px;   
+    object-fit: cover;
+    height: 600px;
+    width: 600px;  
+    top: 1900px;
+    right: 900px;   
 }
 .MelhorProduto2 p {
     margin-top: 100px;
@@ -300,14 +308,8 @@ h2 {
 }
 
 
-
-
-
-
-
-
-/* Inscreva-se */
 .subscribe {
+    
     text-align: center;
     background-color: #f8f9fa;
     padding: 2rem;
@@ -325,25 +327,28 @@ h2 {
 }
 
 
-.form-container {
-    background-color: white;
+.form{
+    
+    background-color: rgb(253, 253, 253);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    
+    
     width: 100%;
-    max-width: 400px;
+    
+   
 }
 
 
 
 label {
-    font-size: 16px;
+    font-size: 1,5rem;
     margin-bottom: 8px;
     display: block;
+    
 }
 
 input {
-    width: 100%;
+    width: 70%;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 4px;
@@ -352,11 +357,11 @@ input {
 }
 
 button {
-    width: 100%;
+    width: 70%;
     padding: 12px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -364,7 +369,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: rgba(250, 250, 50, 0.904);
 }
 
 /* Estilos da mensagem de confirmação */

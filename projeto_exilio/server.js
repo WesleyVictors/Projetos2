@@ -41,7 +41,7 @@ server.post('/usuarios', async (request, reply) => {
 /*            !!! As rotas a seguir ainda não foram concluídas, porém sera adicionado a função de editar e alterar os dados do cliente,
                   para isso, precisamos criar uma pagina apenas para essa finalidade !!!
 
-
+*/
 
 // .post enviar    CRUD
   //console.log(database.list())
@@ -89,7 +89,7 @@ server.delete('/usuarios/:id', (request, reply) => {
     
     return reply.status(204).send()
 }) 
-*/
+
 
 
 server.listen({

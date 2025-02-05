@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&display=swap');
+
+/* CSS criado para padronizar as outras paginas que serão adicionadas
+ 
+
+ cor padrao #0A2126
+ */
+    
+
+main {
+    margin-top: 400px;
+    max-width: 1200px; 
+    margin:  auto; 
+    padding: 20px; 
+    
+}
+body {
+    color: aliceblue;
+    background-image: url("./img/Quadro\ 2.png");
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    background-size: contain;
+}
+
+.inicio {
+    text-align: center;
+}
+h1 {
+    font-family: 'Playwrite VN', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+}
+h2 {
+    font-family: 'Playwrite VN', sans-serif;
+    font-size: 3rem;
+}
+h3 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);    
+    backdrop-filter: blur(10px); 
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.nav img {
+    width: 150px; 
+    height: auto;
+}
+.navlinks {
+    display: flex;
+    list-style: none;
+    margin-right: 5rem; 
+}
+.navlinks li {
+    margin-left: 2rem;
+}
+.navlinks a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s; 
+}
+.navlinks a:hover {
+    opacity: 0.7; 
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+main div {
+    color: #0A2126;
+    background-color: white; 
+    padding: 20px; 
+    margin-bottom: 40px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8); 
+    border-radius: 8px; 
+}
+.topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.topo img {
+    max-width: 1100px;
+    width: 100%;
+    height: auto;
+    margin: 20px;
+}
+
+
+  /*Rodapé !!!necessário mudanças!!! */
+footer {
+    background-color: #2c3e50;
+    color: white; 
+    text-align: center;
+    padding: 20px 0;
+    
+}
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Edição dos links wpp e insta*/
+.social-links {
+    margin-top: 15px;
+}
+.social-icon {
+    margin: 0 10px;
+}
+.social-icon i {
+    width: 30px; 
+    height: 30px;
+    transition: transform 0.3s;
+    color: white;
+}
+.social-icon i:hover {
+    transform: scale(1.1); 
+}
+
+

@@ -1,0 +1,22 @@
+
+POST http://localhost:3333/usuarios
+Content-Type: application/json
+
+
+{
+  "nome": "Maria Oliveira",
+  "email": "maria@example.com",
+  "telefone": "987654321"
+}
+
+
+###
+
+GET http://localhost:3333/usuarios
+
+
+###
+PUT  http://localhost:3333/usuarios
+
+
+

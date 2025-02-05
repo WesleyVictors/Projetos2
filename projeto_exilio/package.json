@@ -1,0 +1,21 @@
+{
+  "name": "projeto_exilio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/formbody": "^8.0.2",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "fastify-formbody": "^5.3.0",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5"
+  }
+}

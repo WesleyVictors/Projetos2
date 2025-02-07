@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Responsiva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+            position: fixed; /* Fixa a barra no topo */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Garante que fique acima de outros elementos */
+        }
+
+        .nav img {
+            height: 50px;
+        }
+
+        .navlinks {
+            list-style: none;
+            display: flex;
+        }
+
+        .navlinks li {
+            margin: 0 15px;
+        }
+
+        .navlinks a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .navlinks a:hover {
+            color: #f4a261;
+        }
+
+        /* Estilo do menu hambúrguer */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        .close-menu {
+            display: none;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .navlinks {
+                display: none;
+                flex-direction: column;
+                position: fixed; /* Fixa a barra sobre o conteúdo */
+                top: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 250px; /* Aumenta o tamanho da barra */
+                height: 100vh; /* Faz a barra ocupar toda a altura da tela */
+                border-radius: 10px 0 0 10px; /* Borda arredondada */
+                padding-top: 60px; /* Dá espaçamento entre os links e o topo */
+                box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.7); /* Sombra para o efeito de sobreposição */
+                transition: transform 0.3s ease-in-out;
+                transform: translateX(100%); /* Inicia a barra fora da tela */
+            }
+
+            .navlinks.show {
+                display: flex;
+                transform: translateX(0); /* Move a barra para dentro da tela */
+            }
+
+            .navlinks li {
+                margin: 20px 0;
+                text-align: center;
+            }
+
+            .navlinks a {
+                font-size: 20px; /* Aumenta o tamanho da fonte no menu */
+            }
+
+            /* Botão de fechar dentro do menu */
+            .close-menu {
+                display: block;
+                font-size: 30px;
+                color: white;
+                text-align: center;
+                cursor: pointer;
+                margin-top: 20px;
+                padding: 10px;
+                text-decoration: none;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <img src="./img/Logo Magnifico.png" alt="Logo">
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <nav class="navbar">
+            <ul class="navlinks" id="menu">
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="blog.html">Sobre nós</a></li>
+                <li><a href="https://wa.me/5591999999999" target="_blank">Contato</a></li> 
+                <li><a class="atalho" href="#top">Início</a></li> 
+                <!-- Botão para fechar o menu -->
+                <li><a href="#" class="close-menu" id="close-menu">&#10006; Fechar</a></li>                
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        // Abrir o menu ao clicar no ícone
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            document.getElementById("menu").classList.toggle("show");
+        });
+
+        // Fechar o menu ao clicar no botão de "Fechar"
+        document.getElementById("close-menu").addEventListener("click", function(e) {
+            e.preventDefault(); // Previne o comportamento padrão de navegação
+            document.getElementById("menu").classList.remove("show");
+        });
+    </script>
+
+</body>
+</html>

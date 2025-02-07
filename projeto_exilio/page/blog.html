@@ -10,14 +10,14 @@
 <body>
     <head>
         <div class="nav">
-           
             <img src="./img/Logo Magnifico.png">
-            <nav class="navbar" id="menu">
-                <ul class="navlinks">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <nav class="navbar" >
+                <ul class="navlinks" id="menu">
                     <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="https://wa.me/5591999999999" target="_blank">Contato</a></li>
                     <li><a href="index.html" class="btn-voltar">Voltar</a></li>
-
+                    <li><a href="#" class="close-menu" id="close-menu">&#10006; Fechar</a></li>
                 </ul>
             </nav>
         </div>
@@ -91,6 +91,14 @@
             <p>Na Exílio, cada produto é feito com a melhor qualidade possível, preparados de forma artesanal com ingredientes selecionados buscando a melhor experiência para o degustador. Ideal para os verdadeiros amantes da verdadeira charcutaria
 
             </p>
+        </div>
+        <div class="subscribe">
+            <h2>INSCREVA-SE</h2>
+            <p>Inscreva-se em nosso canal de atendimento e receba as principais notícias dos eventos que irão acontecer
+                e ganhe cupons de descontos em produtos do site!
+            </p>
+
+            <a href="cadastro.html" class="button">Clique Aqui</a>
         </div>   
     </main>
     <footer>
@@ -107,6 +115,15 @@
              
         </div>
     </footer>
-    
+    <script>
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            document.getElementById("menu").classList.toggle("show");
+        });
+
+        document.getElementById("close-menu").addEventListener("click", function(e) {
+            e.preventDefault(); // Previne o comportamento padrão de navegação
+            document.getElementById("menu").classList.remove("show");
+        });
+    </script>
 </body>
 </html>

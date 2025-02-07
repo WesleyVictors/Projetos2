@@ -2,6 +2,11 @@ import { fastify } from 'fastify'
 import pkg from '@fastify/formbody'
 import { sql } from './sql.js'
 
+//import { DatabaseMemory } from './database-memory.js'
+//import { DatabasePostgres } from './database-postgres.js'
+
+
+
 
 const server = fastify()
 
@@ -11,7 +16,9 @@ const { fastifyFormbody } = pkg;
 server.register(fastifyFormbody); //plugin de processamento
 
 
+//const database = new DatabaseMemory()  //criando banco 
 
+//const database = new DatabasePostgres() 
 
 // Rota para adicionar um novo usuário
 server.post('/usuarios', async (request, reply) => {
@@ -24,25 +31,14 @@ server.post('/usuarios', async (request, reply) => {
         VALUES (${nome}, ${email}, ${telefone})
       `;
   
-  
-      // Retornar sucesso
-      //reply.status(201).send({ message: 'Usuário cadastrado com sucesso!' });
-  
+     // reply.status(201).send({ message: 'Usuário cadastrado com sucesso!' });
+
     } catch (error) {
       console.error('Erro ao cadastrar usuário:', error);
       // Retornar erro se ocorrer
       reply.status(500).send({ error: 'Erro ao cadastrar usuário', details: error.message });
     }
   });
-
-
-
-
-/*            !!! As rotas a seguir ainda não foram concluídas, porém sera adicionado a função de editar e alterar os dados do cliente,
-                  para isso, precisamos criar uma pagina apenas para essa finalidade !!!
-
-*/
-
 // .post enviar    CRUD
   //console.log(database.list())
 
@@ -93,8 +89,7 @@ server.delete('/usuarios/:id', (request, reply) => {
 
 
 server.listen({
-  port: process.env.PORT || 3333, // Usa a porta do Vercel ou 3333 como fallback
-  host: '0.0.0.0', // Permite acesso externo
+  port: process.env.PORT ?? 3333
 })
 
 

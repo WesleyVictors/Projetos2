@@ -14,12 +14,14 @@
     <header>
         <div class="nav">
             <img src="./img/Logo Magnifico.png">
-            <nav class="navbar" id="menu">
-                <ul class="navlinks">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <nav class="navbar" >
+                <ul class="navlinks" id="menu">
                     <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="blog.html">Sobre nós</a></li>
                     <li><a href="https://wa.me/5591999999999" target="_blank">Contato</a></li> 
-                    <li><a class="atalho" href="#top">Inicio</a></li>                 
+                    <li><a class="atalho" href="#top">Inicio</a></li>   
+                    <li><a href="#" class="close-menu" id="close-menu">&#10006; Fechar</a></li>                  
                 </ul>
             </nav>
         </div>
@@ -105,7 +107,7 @@
                 </div>
                 
             </div>
-            <div class="MelhorProduto2">
+            <div class="MelhorProduto">
                 <div class="primary">
                     <p>
                     Os queijos e salames artesanais da Empresa Exílio são sinônimo de tradição, sabor e excelência. Feitos com 
@@ -126,14 +128,16 @@
                 eles agregam um sabor sofisticado e autêntico, elevando qualquer prato a uma experiência inesquecível."
             </p>
         </article>
-        <article id="subscribe" class="subscribe">
+        <div class="subscribe">
             <h2>INSCREVA-SE</h2>
             <p>Inscreva-se em nosso canal de atendimento e receba as principais notícias dos eventos que irão acontecer
                 e ganhe cupons de descontos em produtos do site!
             </p>
+
+            <a href="cadastro.html" class="button">Clique Aqui</a>
             <!-- Esse formulário será aprimorado:
               Informações de endereço e telefone com interação (uso do cep para buscar endereço-->
-            <div class="form">
+          <!--  <div class="form">
                 <form id="form-cadastro" action="http://localhost:3333/usuarios" method="POST">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required><br>
@@ -147,10 +151,10 @@
                     <button type="submit">Enviar</button>
                 </form>
                    
-            </div>
+            </div> -->
           
 
-        </article>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -166,6 +170,18 @@
             
         </div>
     </footer>
-</body>
+    <script>
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            document.getElementById("menu").classList.toggle("show");
+        });
 
+        document.getElementById("close-menu").addEventListener("click", function(e) {
+            e.preventDefault(); // Previne o comportamento padrão de navegação
+            document.getElementById("menu").classList.remove("show");
+        });
+    </script>
+</body>
+    
 </html>
+
+

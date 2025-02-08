@@ -1,14 +1,21 @@
 import { fastify } from 'fastify'
 import pkg from '@fastify/formbody'
 import { sql } from './sql.js'
-
+import fastifyStatic from "@fastify/static"
+import path from "path"
 
 const server = fastify()
 
 
 const { fastifyFormbody } = pkg;
 
+fastify.register(fastifyStatic, {
+  root: path.join(process.cwd(),"public"),
+});
+
 server.register(fastifyFormbody); //plugin de processamento
+
+
 
 
 

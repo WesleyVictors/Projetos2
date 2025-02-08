@@ -91,7 +91,8 @@ server.delete('/usuarios/:id', (request, reply) => {
 
 
 server.listen({
-  port: process.env.PORT ?? 3333
+  port: process.env.PORT || 3333, // Usa a porta do Vercel ou 3333 como fallback
+  host: '0.0.0.0', // Permite acesso externo
 })
 
 

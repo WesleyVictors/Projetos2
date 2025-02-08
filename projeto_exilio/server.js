@@ -24,7 +24,7 @@ server.post('/usuarios', async (request, reply) => {
         VALUES (${nome}, ${email}, ${telefone})
       `;
   
-  
+      return reply.redirect("./page/index.html");
       // Retornar sucesso
       //reply.status(201).send({ message: 'Usuário cadastrado com sucesso!' });
   
@@ -55,13 +55,13 @@ server.post('/usuarios', async (request, reply) => {
 
 
  // .get buscar informaçoes   
-server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
-    const usuarios = database.list()
+//server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
+    //const usuarios = database.list()
 
-    return usuarios
+   // return usuarios
 // .put alterar
 
-}) 
+//}) 
 
 
 

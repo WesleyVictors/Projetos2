@@ -49,7 +49,8 @@ server.post('/usuarios', async (request, reply) => {
 
 
   server.get('/', (req, res) => {
-    res.send('Bem-vindo ao servidor! Acesse /usuarios para ver a lista de usuários.');
+    res.send('Bem-vindo ao servidor! Acesse /usuarios para ver a lista de usuários.')
+    return reply.redirect("./page/index.html");
 });
 
  // .get buscar informaçoes   
@@ -65,7 +66,7 @@ server.post('/usuarios', async (request, reply) => {
 
 // .put alterar
 server.put('/usuarios/:id', (request) => {    //quando acessador o localhost333,(rota raíz) será executado essa função
-    const usuarioID = request.params.id       //solicita o id do video para alterar
+    const usuarioID = request.params.id       //solicita o id para alterar
     const { nome, email, telefone } = request.body
 
     database.update(usuarioID, {   //atualiza as informações 

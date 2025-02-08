@@ -10,7 +10,7 @@ const server = fastify()
 const { fastifyFormbody } = pkg;
 
 fastify.register(fastifyStatic, {
-  root: path.join(process.cwd(),"public"),
+  root: path.join(process.cwd(),"static"),
 });
 
 server.register(fastifyFormbody); //plugin de processamento

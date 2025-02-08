@@ -10,5 +10,4 @@ sql`
 `.then (() => {
     console.log('tabela criada')
 })
-
-// Criação da tabela no neon console.
+    

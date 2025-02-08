@@ -1,7 +1,11 @@
 import { fastify } from 'fastify'
 import pkg from '@fastify/formbody'
 import { sql } from './sql.js'
-import fastifyStatic from "@fastify/static"
+
+//import { DatabaseMemory } from './database-memory.js'
+//import { DatabasePostgres } from './database-postgres.js'
+
+
 
 
 const server = fastify()
@@ -9,16 +13,12 @@ const server = fastify()
 
 const { fastifyFormbody } = pkg;
 
-fastify.register(fastifyStatic, {
-  root: path.join(process.cwd(),"./static/index.html"),
-});
-
 server.register(fastifyFormbody); //plugin de processamento
 
 
+//const database = new DatabaseMemory()  //criando banco 
 
-
-
+//const database = new DatabasePostgres() 
 
 // Rota para adicionar um novo usuário
 server.post('/usuarios', async (request, reply) => {
@@ -30,26 +30,80 @@ server.post('/usuarios', async (request, reply) => {
         INSERT INTO usuarios (nome, email, telefone) 
         VALUES (${nome}, ${email}, ${telefone})
       `;
-  
-      return reply.redirect("./page/index.html");
-      // Retornar sucesso
-      //reply.status(201).send({ message: 'Usuário cadastrado com sucesso!' });
-  
+
+
+      return reply.type('text/html').send(`
+         <html>
+        <head>
+          <title>Cadastro realizado com sucesso</title>
+          <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              background-color: #f4f7fc;
+              font-family: Arial, sans-serif;
+            }
+            .container {
+              text-align: center;
+              padding: 20px;
+              background-color: #ffffff;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .success-message {
+              font-size: 36px;
+              font-weight: bold;
+              color: #0A2126;
+              margin-bottom: 20px;
+            }
+           
+            .container button {
+              font-size: 18px;
+              background-color: #28a745;
+              color: white;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+            .container button:hover {
+              background-color: #218838;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="success-message">
+              Cadastro realizado com sucesso!
+            </div>
+            <div class="success-message">
+              Entraremos em contato em breve para te atender
+            </div>
+            <script>
+              setTimeout(() => {
+                window.location.href = "http://127.0.0.1:5500/page/index.html";
+              }, 3000); 
+            </script>
+          </div>
+        </body>
+      </html>
+      `);
+    
+
     } catch (error) {
       console.error('Erro ao cadastrar usuário:', error);
       // Retornar erro se ocorrer
       reply.status(500).send({ error: 'Erro ao cadastrar usuário', details: error.message });
     }
   });
-
-
-
-
-/*            !!! As rotas a seguir ainda não foram concluídas, porém sera adicionado a função de editar e alterar os dados do cliente,
-                  para isso, precisamos criar uma pagina apenas para essa finalidade !!!
-
-*/
-
 // .post enviar    CRUD
   //console.log(database.list())
 
@@ -62,13 +116,13 @@ server.post('/usuarios', async (request, reply) => {
 
 
  // .get buscar informaçoes   
-//server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
-    //const usuarios = database.list()
+server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
+    const usuarios = database.list()
 
-   // return usuarios
+    return usuarios
 // .put alterar
 
-//}) 
+}) 
 
 
 
@@ -100,8 +154,7 @@ server.delete('/usuarios/:id', (request, reply) => {
 
 
 server.listen({
-  port: process.env.PORT || 3333, // Usa a porta do Vercel ou 3333 como fallback
-  host: '0.0.0.0', // Permite acesso externo
+  port: process.env.PORT ?? 3333
 })
 
 

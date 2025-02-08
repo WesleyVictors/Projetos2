@@ -48,16 +48,18 @@ server.post('/usuarios', async (request, reply) => {
 
 
 
-
+  server.get('/', (req, res) => {
+    res.send('Bem-vindo ao servidor! Acesse /usuarios para ver a lista de usuários.');
+});
 
  // .get buscar informaçoes   
 //server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
-    //const usuarios = database.list()
+   // const usuarios = database.list()
 
-    //return usuarios
+   // return console.log("Deu certo")
 // .put alterar
 
-//}) 
+//});
 
 
 

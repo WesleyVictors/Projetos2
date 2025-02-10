@@ -1,6 +1,6 @@
 import { fastify } from 'fastify'
 import pkg from '@fastify/formbody'
-import { sql } from './sql.js'
+import { sql } from '../sql.js'
 import cors from 'fastify-cors'
 
 //import { DatabaseMemory } from './database-memory.js'

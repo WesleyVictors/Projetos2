@@ -157,9 +157,9 @@ server.delete('/usuarios/:id', (request, reply) => {
 
 
 
-server.listen({
-  port: process.env.PORT ?? 3333
-})
+//server.listen({
+ // port: process.env.PORT ?? 3333
+//})
 
 
 module.exports = server.createHandler();

@@ -1,6 +1,7 @@
 import { fastify } from 'fastify'
 import pkg from '@fastify/formbody'
 import { sql } from './sql.js'
+import cors from 'fastify-cors'
 
 //import { DatabaseMemory } from './database-memory.js'
 //import { DatabasePostgres } from './database-postgres.js'
@@ -9,6 +10,9 @@ import { sql } from './sql.js'
 
 
 const server = fastify()
+
+
+server.register(cors); 
 
 
 const { fastifyFormbody } = pkg;
@@ -157,6 +161,8 @@ server.listen({
   port: process.env.PORT ?? 3333
 })
 
+
+module.exports = server.createHandler();
 
 
 //instalar extesão dotenv serve para guardar as variais de ambiente

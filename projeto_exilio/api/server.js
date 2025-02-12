@@ -7,6 +7,12 @@ import cors from 'fastify-cors'
 //import { DatabasePostgres } from './database-postgres.js'
 
 
+const fastify = fastify({ logger: true});
+
+fastify.register(fastifyStatic, { 
+    root: path.join(__dirname, 'page'),
+    prefix: '/',
+})
 
 
 const server = fastify()

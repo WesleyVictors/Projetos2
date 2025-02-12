@@ -491,11 +491,6 @@ footer {
         font-size: 1rem;
     }
 
-
-      
-   
-   
-
     .estatisticas {
     padding: 40px;
     display: grid;
@@ -506,7 +501,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Ajuste do menu de navegação */
+   
     .menu-icon {
         display: block;
         
@@ -589,10 +584,11 @@ footer {
     }
 
     .meio {
-        min-height: 3500px;
+        
         display: flex;
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center; 
+        height: 2500px;
         width: 100vw;
         padding-top: 200px;
     }
@@ -603,29 +599,27 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 150px);
         grid-template-rows: repeat(2, 150px);
-        /* muda o posicionamento dos elementos para um grid de duas colunas */
-        }
+      
+    }
 
-        .dados h2 {
+    .dados h2 {
             font-size: 50px;
             text-align: center;
-        }
-        .MelhorProduto p {
+            height: auto;
+    }
+    .MelhorProduto p {
             padding: 20px;
-        }
+    }
         
-        
-        
-        .circle {
+    .circle {
             width: 150px;
             height: 150px;
-        }
+    }
          
-        .circle p {
+    .circle p {
                 margin: 15, 30px;
                 font-size: 1rem;     
-        }    
-
+    }    
 
     .primary {
         max-width: 100%;
@@ -633,25 +627,32 @@ footer {
     .primary p {
         font-size: 20px;
     }
-
+   
     .image1 {
         width: 300px;
         height: 300px;
         object-fit: cover;
     }
-
-
-
+    #segunda_chamada {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        top: -300px;
+        
+    }
+     
+    .texto {
+        font-size: 1.2rem;
+        padding: 50px;
+    } 
     
-
-    /* Ajustando as estatísticas */
-    
-
+    .subscribe {
+        padding: 50px;
+    }
  
-    /* Ajustando o rodapé */
     .footer-content {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
-}
+    }

@@ -4,12 +4,21 @@
     {
       "src": "api/server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "page/cadastro.html"
     }
+
   ],
   "routes": [
     {
       "src": "/(.*)",
       "dest": "api/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "page/cadastro.html"
     }
   ]
 }

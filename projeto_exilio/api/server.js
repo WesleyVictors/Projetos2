@@ -20,6 +20,7 @@ const { fastifyFormbody } = pkg;
 server.register(fastifyFormbody); //plugin de processamento
 
 
+
 //const database = new DatabaseMemory()  //criando banco 
 
 //const database = new DatabasePostgres() 

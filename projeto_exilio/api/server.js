@@ -7,15 +7,15 @@ import cors from 'fastify-cors'
 //import { DatabasePostgres } from './database-postgres.js'
 
 
-const fastify = fastify({ logger: true});
+const server = fastify({ logger: true});
 
-fastify.register(fastifyStatic, { 
+server.register(fastifyStatic, { 
     root: path.join(__dirname, 'page'),
-    prefix: '/',
+    prefix: '/page/',
 })
 
 
-const server = fastify()
+
 
 
 server.register(cors); 
@@ -30,6 +30,13 @@ server.register(fastifyFormbody); //plugin de processamento
 //const database = new DatabaseMemory()  //criando banco 
 
 //const database = new DatabasePostgres() 
+
+
+server.get('*', async(require, reply) => {
+  reply.sendFile('cadastro.html');
+});
+
+
 
 // Rota para adicionar um novo usuário
 server.post('/usuarios', async (request, reply) => {

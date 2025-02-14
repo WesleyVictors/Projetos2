@@ -1,22 +1,28 @@
-import 'dotenv/config'   //le  as variáveis ambient do .env e salva na variável global do node process.env
-import postgres from 'postgres'
+// sql.js
+import { Client } from 'pg';
 
-
-const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
-
-export const sql = postgres({
-  host: PGHOST,
-  database: PGDATABASE,
-  username: PGUSER,
-  password: PGPASSWORD,
-  //port: 5432,
-  //ssl: 'require',
-  port: 5432, // Porto do PostgreSQL
+// Criando uma instância do cliente do PostgreSQL
+const client = new Client({
+  connectionString: process.env.DATABASE_URL, // A URL de conexão do banco de dados
   ssl: {
-    rejectUnauthorized: false,
-   }, // Para garantir que o cliente aceite certificados não verificados
-  connection: {
-    options: `project=${ENDPOINT_ID}`,
-  },
+    rejectUnauthorized: false,  // Necessário para conectar via SSL ao banco de dados na Neon
+  }
 });
 
+// Função para inicializar a conexão
+const initDB = async () => {
+  await client.connect();
+};
+
+// Função para realizar consultas SQL
+const sql = async (query, values = []) => {
+  try {
+    const res = await client.query(query, values);
+    return res;
+  } catch (error) {
+    console.error('Erro ao executar consulta:', error);
+    throw error;
+  }
+};
+
+export { initDB, sql };

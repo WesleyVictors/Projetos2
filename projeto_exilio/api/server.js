@@ -1,24 +1,14 @@
 import { fastify } from 'fastify'
 import pkg from '@fastify/formbody'
-import { sql } from '../sql.js'
-import cors from 'fastify-cors'
+import { sql } from './sql.js'
 
 //import { DatabaseMemory } from './database-memory.js'
 //import { DatabasePostgres } from './database-postgres.js'
 
 
-const server = fastify({ logger: true});
-
-server.register(fastifyStatic, { 
-    root: path.join(__dirname, 'page'),
-    prefix: '/page/',
-})
 
 
-
-
-
-server.register(cors); 
+const server = fastify()
 
 
 const { fastifyFormbody } = pkg;
@@ -26,17 +16,9 @@ const { fastifyFormbody } = pkg;
 server.register(fastifyFormbody); //plugin de processamento
 
 
-
 //const database = new DatabaseMemory()  //criando banco 
 
 //const database = new DatabasePostgres() 
-
-
-server.get('*', async(require, reply) => {
-  reply.sendFile('cadastro.html');
-});
-
-
 
 // Rota para adicionar um novo usuário
 server.post('/usuarios', async (request, reply) => {
@@ -134,13 +116,13 @@ server.post('/usuarios', async (request, reply) => {
 
 
  // .get buscar informaçoes   
-//server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
-   // const usuarios = database.list()
+server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
+    const usuarios = database.list()
 
-   // return usuarios
+    return usuarios
 // .put alterar
 
-//}) 
+}) 
 
 
 
@@ -171,12 +153,10 @@ server.delete('/usuarios/:id', (request, reply) => {
 
 
 
-//server.listen({
- // port: process.env.PORT ?? 3333
-//})
+server.listen({
+  port: process.env.PORT ?? 3333
+})
 
-
-module.exports = server.createHandler();
 
 
 //instalar extesão dotenv serve para guardar as variais de ambiente

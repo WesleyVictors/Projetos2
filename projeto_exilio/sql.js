@@ -9,8 +9,6 @@ export const sql = postgres({
   database: PGDATABASE,
   username: PGUSER,
   password: PGPASSWORD,
-  //port: 5432,
-  //ssl: 'require',
   port: 5432, // Porto do PostgreSQL
   ssl: {
     rejectUnauthorized: false,

@@ -649,6 +649,9 @@ footer {
     .subscribe {
         padding: 50px;
     }
+    .subscribe h2 {
+        font-size: 1,2rem;
+    }
  
     .footer-content {
         flex-direction: column;

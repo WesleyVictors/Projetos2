@@ -10,4 +10,3 @@ sql`
 `.then (() => {
     console.log('tabela criada')
 })
-    

@@ -1,30 +1,13 @@
 import { fastify } from 'fastify'
 import pkg from '@fastify/formbody'
-import { sql } from './sql.js'
-
-//import { DatabaseMemory } from './database-memory.js'
-//import { DatabasePostgres } from './database-postgres.js'
-
-
+import { sql } from '../model/sql.js'
 
 
 const server = fastify()
 
-
 const { fastifyFormbody } = pkg;
 
 server.register(fastifyFormbody); //plugin de processamento
-
-
-//const database = new DatabaseMemory()  //criando banco 
-
-//const database = new DatabasePostgres() 
-
-// Rota para adicionar um novo usuário
-
-
-
-
 
 server.get('/usuarios', async (request, reply) => {
   return { message: 'Servidor rodando' };
@@ -110,7 +93,6 @@ server.post('/usuarios', async (request, reply) => {
 
     } catch (error) {
       console.error('Erro ao cadastrar usuário:', error);
-      // Retornar erro se ocorrer
       reply.status(500).send({ error: 'Erro ao cadastrar usuário', details: error.message });
     }
   });
@@ -121,23 +103,3 @@ server.listen({
 })
 
 
-
-//instalar extesão dotenv serve para guardar as variais de ambiente
-
-
-
-//import {createServer} from 'node:http'
-//criação servidor com json  
-
-//const server = createServer(() =>{   //os parametros dessa funçaõ serão de request ou response
-
-//})
-//server.addListen(3333) //porta usada 
-
-//antes de rodar deve-se acionar o npm init -y para criar o pack .json  no pack adiconar (type: module)
-
-//Para rodar, acione node server.js ou para acompanhar as mudanças em tempo real: node --watch server.js 
-
-// para uso do http instalar estensão rest client 
-
-//Para criação do servidor será usado o framework fastify npm install fastify

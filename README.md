@@ -7,7 +7,9 @@
 # O banco de dados usado foi o postgres no neo console    https://console.neon.tech/app/projects/yellow-violet-87419544/branches/br-rough-firefly-a8jf776j/tables?database=neondb
 
 
-# O front end e o back and estão armazenados no vercel em dois projetos distintos 
+# O front, e o back and estão armazenados no vercel em dois projetos distintos 
 # back https://vercel.com/wesley-victors-projects/projetos2
 # front https://vercel.com/wesley-victors-projects/projetos2-9hr3 
+
+# esse é o link do site https://projetos2-9hr3.vercel.app/
 

@@ -89,7 +89,7 @@ server.post('/usuarios', async (request, reply) => {
             </div>
             <script>
               setTimeout(() => {
-                window.location.href = "https://projetos2-9hr3-git-main-wesley-victors-projects.vercel.app";
+                window.location.href = "https://projetos2-9hr3.vercel.app/";
               }, 3000); 
             </script>
           </div>

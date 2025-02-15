@@ -26,8 +26,8 @@ server.register(fastifyFormbody); //plugin de processamento
 
 
 
-fastify.get('/usuarios', async (request, reply) => {
-  return { message: 'Olá, este é um servidor Fastify rodando no Vercel!' };
+server.get('/usuarios', async (request, reply) => {
+  return { message: 'Servidor rodando' };
 });
 
 

@@ -116,8 +116,7 @@ server.post('/usuarios', async (request, reply) => {
 
 
  // .get buscar informaçoes   
-server.get('/usuarios', (req, res) => {    //quando acessador o localhost333,(rota raíz) será executado essa função
-
+server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
     const usuarios = database.list()
 
     return usuarios

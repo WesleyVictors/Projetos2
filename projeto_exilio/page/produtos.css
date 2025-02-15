@@ -203,7 +203,9 @@ footer {
 .social-links {
     margin-top: 15px;
 }
-
+.social-links a {
+    text-decoration: none;
+}
 .social-icon {
     margin: 0 10px;
 }

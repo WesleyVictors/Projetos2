@@ -39,11 +39,14 @@ h1 {
     font-family: 'Playwrite VN', sans-serif;
     font-size: clamp(2rem, 5vw, 4rem); /* Mín: 2rem | Ideal: 5% da tela | Máx: 4rem */
     text-align: center;
+    padding: 20px;
 }
 
 h2 {
     font-family: 'Playwrite VN', sans-serif;
     font-size: clamp(1.8rem, 4vw, 3rem);
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 h3 {
@@ -131,7 +134,7 @@ main div {
     background-color: rgba(0, 0, 0, 0.5);    
     backdrop-filter: blur(10px); 
    
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     margin: 0 auto;
     
@@ -146,7 +149,7 @@ main div {
 
 .subscribe p {
    
-    font-size: 1rem;
+    font-size: 1,5rem;
     color: #ffffff;
     text-align: justify;
     padding-bottom: 20px;
@@ -193,6 +196,9 @@ footer {
 /* Edição dos links wpp e insta*/
 .social-links {
     margin-top: 15px;
+}
+.social-links a {
+    text-decoration: none;
 }
 .social-icon {
     margin: 0 10px;

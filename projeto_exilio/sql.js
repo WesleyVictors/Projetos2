@@ -1,4 +1,4 @@
-import 'dotenv/config'   //le  as variáveis ambient do .env e salva na variável global do node process.env
+import 'dotenv/config'   
 import postgres from 'postgres'
 
 
@@ -9,7 +9,7 @@ export const sql = postgres({
   database: PGDATABASE,
   username: PGUSER,
   password: PGPASSWORD,
-  port: 5432, // Porto do PostgreSQL
+  port: 5432, // Porta do PostgreSQL
   ssl: {
     rejectUnauthorized: false,
    }, // Para garantir que o cliente aceite certificados não verificados

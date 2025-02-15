@@ -89,7 +89,7 @@ server.post('/usuarios', async (request, reply) => {
             </div>
             <script>
               setTimeout(() => {
-                window.location.href = "http://127.0.0.1:5500/page/index.html";
+                window.location.href = "https://projetos2-9hr3-git-main-wesley-victors-projects.vercel.app";
               }, 3000); 
             </script>
           </div>
@@ -104,53 +104,6 @@ server.post('/usuarios', async (request, reply) => {
       reply.status(500).send({ error: 'Erro ao cadastrar usuário', details: error.message });
     }
   });
-// .post enviar    CRUD
-  //console.log(database.list())
-
-
-
-  //return reply.status(201).send()// retorna o status de erro ou sucesso  201 significa que algo foi criado 
-
-
-
-
-
- // .get buscar informaçoes   
-server.get('/usuarios', () => {    //quando acessador o localhost333,(rota raíz) será executado essa função
-    const usuarios = database.list()
-
-    return usuarios
-// .put alterar
-
-}) 
-
-
-
-// .put alterar
-server.put('/usuarios/:id', (request) => {    //quando acessador o localhost333,(rota raíz) será executado essa função
-    const usuarioID = request.params.id       //solicita o id do video para alterar
-    const { nome, email, telefone } = request.body
-
-    database.update(usuarioID, {   //atualiza as informações 
-        nome,
-        email, 
-        telefone,
-    })
-
-
-    return reply.status(204).send()  //204 significa que teve sucesso, porém não tem conteúdo
-}) 
-
-
-server.delete('/usuarios/:id', (request, reply) => {
-    const usuarioID = request.params.id
-    
-    database.delete(usuarioID)
-
-    
-    return reply.status(204).send()
-}) 
-
 
 
 server.listen({

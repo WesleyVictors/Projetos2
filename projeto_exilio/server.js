@@ -21,6 +21,16 @@ server.register(fastifyFormbody); //plugin de processamento
 //const database = new DatabasePostgres() 
 
 // Rota para adicionar um novo usuário
+
+
+
+
+
+fastify.get('/usuarios', async (request, reply) => {
+  return { message: 'Olá, este é um servidor Fastify rodando no Vercel!' };
+});
+
+
 server.post('/usuarios', async (request, reply) => {
     const { nome, email, telefone } = request.body;
   
